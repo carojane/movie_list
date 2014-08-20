@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Movies</title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+
+  <body>
+
+    <h1><%= @movie_info[:title] %></h1>
+      <ul>
+        <% @movie_info.each do |key, value| %>
+          <% if value != "" && value != nil && key != :id && key != :title %>
+          <li><h3><%=key%>:</h3>
+            <%=value%></li>
+        <% end %>
+      <% end %>
+
+    </ul>
+
+  </body>
+
+</html>
